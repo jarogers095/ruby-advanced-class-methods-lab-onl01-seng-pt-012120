@@ -7,7 +7,7 @@ class Song
   end
 
   def self.find_by_name(song_name)
-    return @@all.find(song_name)
+    return @@all.find{
   end
 
   def save()

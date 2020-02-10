@@ -32,4 +32,11 @@ class Song
     new_song.save
     return new_song
   end
+  
+  def self.find_or_create_by_name(song_name)
+    if find_by_name(song_name)
+      return find_by_name(song_name)
+    else
+      return create_by_name(song_Name)
+    end
 end

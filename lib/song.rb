@@ -14,7 +14,7 @@ class Song
     self.class.all << self
   end
   
-  def create()
+  def self.create()
     save()
     return self
   end

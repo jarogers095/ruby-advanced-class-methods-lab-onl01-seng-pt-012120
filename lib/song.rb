@@ -27,7 +27,9 @@ class Song
   end
   
   def create_by_name(song_name)
-    @name = song_name
-    save()
+    new_song = Song.new
+    new_song.name = song_name
+    new_song.save
+    return new_song
   end
 end

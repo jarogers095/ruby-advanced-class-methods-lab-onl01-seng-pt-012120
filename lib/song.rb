@@ -46,8 +46,10 @@ class Song
   end
   
   def self.new_from_filename(filename)
-    filename_pieces = filename.split(/-||\./)
-    return filename_pieces
+    filename_pieces = filename.split(/ - |\.mp3/)
+    new_song = Song.new_by_name(filename_pieces[1])
+    new_song.artist_name = filename_pieces[0]
+    return new_song
   end
   
   def self.destroy_all

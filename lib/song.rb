@@ -40,4 +40,14 @@ class Song
       return create_by_name(song_name)
     end
   end
+  
+  def self.alphabetical
+    return @@all.sort
+  end
+  
+  
+  
+  def self.destroy_all
+    @@all.clear
+  end
 end

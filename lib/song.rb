@@ -42,7 +42,7 @@ class Song
   end
   
   def self.alphabetical
-    return @@all.sort{|song| song
+    return @@all.sort{|song_a, song_b| song_a.name <=> song_b.name}
   end
   
   

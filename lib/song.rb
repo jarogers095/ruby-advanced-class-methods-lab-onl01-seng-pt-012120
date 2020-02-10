@@ -45,7 +45,10 @@ class Song
     return @@all.sort{|song_a, song_b| song_a.name <=> song_b.name}
   end
   
-  
+  def self.new_from_filename(filename)
+    filename_pieces = filename.split(/-||\./)
+    return filename_pieces
+  end
   
   def self.destroy_all
     @@all.clear
